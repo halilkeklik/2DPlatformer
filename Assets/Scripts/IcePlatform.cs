@@ -14,6 +14,7 @@ public class IcePlatform : MonoBehaviour
             collision.gameObject.GetComponent<CharacterMovementController>().jumpJorce -= iceForce;
         }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<CharacterMovementController>().movementSpeed += iceForce;
