@@ -394,7 +394,7 @@ Transform:
   - {fileID: 1952259753}
   - {fileID: 2072743517}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823768758 stripped
 GameObject:
@@ -436,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 4247521601749691666, guid: e23ac615147fa264eab2ed5fea23b741,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4247521601749691666, guid: e23ac615147fa264eab2ed5fea23b741,
         type: 3}
@@ -609,6 +609,7 @@ MonoBehaviour:
   platformPrefabs:
   - {fileID: 9063098594777694217, guid: 54fb0d463831870439df08521f440018, type: 3}
   - {fileID: 1876195139967358686, guid: ff637925b0b3bfd4a8629a11bb5c3353, type: 3}
+  - {fileID: 4491613780100053917, guid: 4ba64d7cf9c9d3f4f9a13152a356affd, type: 3}
   platformSpawnCount: 150
   lastEndPoint: {x: 6.2, y: 0, z: 0}
 --- !u!4 &2026108622
