@@ -5,12 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] platformPrefabs;
+    public GameObject[] attackablePrefabs;
     public int platformSpawnCount;
 
     public Vector3   lastEndPoint;
-
-
-
 
     public void SpawnPlatforms()
     {
@@ -21,13 +19,21 @@ public class GameManager : MonoBehaviour
 
             platform.transform.position = lastEndPoint;
 
+            int x = Random.Range(0, 10);
+            if (x >= 7)
+            {
+                GameObject tree = GameObject.Instantiate(attackablePrefabs[Random.Range(0, attackablePrefabs.Length)]);
+                {
+                    tree.transform.position = lastEndPoint + new Vector3(1, 2.3f, 0);
+                }
+            }
             lastEndPoint = platformScript.returnEndPoint();
         }
     }
 
     private void Awake()
     {
-
+        lastEndPoint.z = 1;
     }
 
     // Start is called before the first frame update

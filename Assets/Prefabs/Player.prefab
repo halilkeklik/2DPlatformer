@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 4247521601749691664}
   - component: {fileID: 4247521601749691665}
   - component: {fileID: 895314728446714085}
-  - component: {fileID: 9168669106607399060}
+  - component: {fileID: 6796938195720964488}
   - component: {fileID: 8020101771979705799}
   - component: {fileID: 2404741173536417361}
+  - component: {fileID: 7200797463513088351}
+  - component: {fileID: 9168669106607399060}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33,7 +35,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.0679, y: 4.289, z: 1}
   m_LocalScale: {x: 1.2028962, y: 1.1188686, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7562471953395260227}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -147,25 +150,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4405f4e9bd629bd4f8bb5ee70f3dfaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &9168669106607399060
-Animator:
-  serializedVersion: 3
+--- !u!114 &6796938195720964488
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4247521601749691678}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25c2e39fd3ae5e741b8545cabfb28d6c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bee059a65b79b4bb5ab29757ac0a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  objectType: 0
+  spriteRenderer: {fileID: 4247521601749691667}
 --- !u!114 &8020101771979705799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +197,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7f8cc68c81fcb438c3dd3242b60b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7200797463513088351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247521601749691678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b104d7e198af6384fb5050a924abeef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  attackRange: 0.45
+  attackPoint: {fileID: 8244407555411541021}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isAttacking: 0
+--- !u!95 &9168669106607399060
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247521601749691678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25c2e39fd3ae5e741b8545cabfb28d6c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &8244407555411541021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7562471953395260227}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7562471953395260227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244407555411541021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.375, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4247521601749691666}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

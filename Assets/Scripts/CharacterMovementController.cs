@@ -9,6 +9,7 @@ public class CharacterMovementController : MonoBehaviour
         Idle,
         Running,
         Jumping,
+        Attacking
     }
 
     public enum FacingDirection
@@ -51,7 +52,6 @@ public class CharacterMovementController : MonoBehaviour
     private void FixedUpdate()
     {
         HandleMovement();
-        SetCharaterState();
         PlayAnmationsBasedOnState();
         SetCharacterDirection();
     }
@@ -87,38 +87,13 @@ public class CharacterMovementController : MonoBehaviour
     }
 
 
-    private bool isGrounded()
+    public bool isGrounded()
     {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(spriteRenderer.bounds.center,
             spriteRenderer.bounds.size, 0f, Vector2.down,
             isGroundedRayLength, platformLayerMask);
 
         return raycastHit2D.collider != null;
-    }
-
-    private void SetCharaterState()
-    {
-        if (isGrounded())
-        {
-            if (rigidBody2D.velocity.x == 0)
-            {
-                movementStates = MovementStates.Idle;
-            }
-            else if (rigidBody2D.velocity.x > 0)
-            {
-                facingDirection = FacingDirection.Right;
-                movementStates = MovementStates.Running;
-            }
-            else if (rigidBody2D.velocity.x < 0)
-            {
-                facingDirection = FacingDirection.Left;
-                movementStates = MovementStates.Running;
-            }
-        }
-        else
-        {
-            movementStates = MovementStates.Jumping;
-        }
     }
 
     private void SetCharacterDirection()

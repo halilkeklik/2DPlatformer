@@ -14,6 +14,7 @@ public class CharacterAnimationController : MonoBehaviour
     {
         animator.SetBool("isJumping", true);
     }
+
     public void PlayIdleAnim()
     {
         animator.SetBool("isRunning", false);
@@ -26,4 +27,18 @@ public class CharacterAnimationController : MonoBehaviour
         animator.SetBool("isJumping", false);
     }
 
+    public void StopRunningAnim()
+    {
+        animator.SetBool("isRunning", false);
+    }
+
+    public void StopJumpingAbim()
+    {
+        animator.SetBool("isJumping", false);
+    }
+
+    public void TiggerAttackAnim()
+    {
+        animator.SetTrigger("Attacking");
+    }
 }
