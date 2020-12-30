@@ -22,9 +22,9 @@ public class GameManager : MonoBehaviour
             int x = Random.Range(0, 10);
             if (x >= 7)
             {
-                GameObject tree = GameObject.Instantiate(attackablePrefabs[Random.Range(0, attackablePrefabs.Length)]);
+                GameObject enemy = GameObject.Instantiate(attackablePrefabs[Random.Range(0, attackablePrefabs.Length)]);
                 {
-                    tree.transform.position = lastEndPoint + new Vector3(1, 2.3f, 0);
+                    enemy.transform.position = lastEndPoint + new Vector3(1, 0.81f, 0);
                 }
             }
             lastEndPoint = platformScript.returnEndPoint();

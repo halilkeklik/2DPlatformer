@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 4247521601749691666, guid: e23ac615147fa264eab2ed5fea23b741,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.11
+      value: -5.79
       objectReference: {fileID: 0}
     - target: {fileID: 4247521601749691666, guid: e23ac615147fa264eab2ed5fea23b741,
         type: 3}
@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.84, z: 0}
+  m_LocalPosition: {x: -0.12, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -568,11 +568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefabs:
   - {fileID: 9063098594777694217, guid: 54fb0d463831870439df08521f440018, type: 3}
-  - {fileID: 1876195139967358686, guid: ff637925b0b3bfd4a8629a11bb5c3353, type: 3}
-  - {fileID: 4437417962241366148, guid: 6c1804ed0a005bc41bcb8120cba45e31, type: 3}
   attackablePrefabs:
-  - {fileID: 6660921447566248724, guid: 46e8aba53fecebd45b9b1399db3244d5, type: 3}
-  platformSpawnCount: 150
+  - {fileID: 1776989009151913244, guid: c816a6aa91f1753479c7a9e143661101, type: 3}
+  platformSpawnCount: 50
   lastEndPoint: {x: 9.5, y: 0, z: 0}
 --- !u!4 &2026108622
 Transform:

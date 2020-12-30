@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\CharacterCombat.cs" />
     <Compile Include="Assets\Scripts\CharacterMovementController.cs" />
     <Compile Include="Assets\Scripts\DisappearPlatform.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\IcePlatform.cs" />
@@ -257,11 +258,11 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Proje/2019.4.16f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>C:/Users/halil/2DPlatformer/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Users/halil/2DPlatformer/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:/Users/halil/2DPlatformer/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Proje/2019.4.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

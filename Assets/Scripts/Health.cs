@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public enum AttackableObject
     {
         Player,
-        Tree
+        Enemy
     }
 
     public int health;
@@ -18,8 +18,8 @@ public class Health : MonoBehaviour
     public  void TakeDamage(int damage)
     {
         health -= damage;
-
-        if (objectType == AttackableObject.Tree)
+        
+        if (objectType == AttackableObject.Enemy)
         {
             HitFeedback();
         }
@@ -32,7 +32,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            if (objectType == AttackableObject.Tree)
+            if (objectType == AttackableObject.Enemy)
             {
                 TreeDestoryFedBack();
             }
