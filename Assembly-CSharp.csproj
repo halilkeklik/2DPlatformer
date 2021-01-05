@@ -70,11 +70,13 @@
     <Compile Include="Assets\Scripts\CharacterCombat.cs" />
     <Compile Include="Assets\Scripts\CharacterMovementController.cs" />
     <Compile Include="Assets\Scripts\DisappearPlatform.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\IDamageable.cs" />
     <Compile Include="Assets\Scripts\IcePlatform.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\SkeletonHealth.cs" />
+    <Compile Include="Assets\Scripts\TreeHealth.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Proje/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

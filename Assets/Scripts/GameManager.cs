@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
             {
                 GameObject enemy = GameObject.Instantiate(attackablePrefabs[Random.Range(0, attackablePrefabs.Length)]);
                 {
-                    enemy.transform.position = lastEndPoint + new Vector3(1, 0.81f, 0);
+                    enemy.transform.position = lastEndPoint + new Vector3(1, 1.8f, 0);
                 }
             }
             lastEndPoint = platformScript.returnEndPoint();
